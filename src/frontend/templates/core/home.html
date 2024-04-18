@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% csrf_token %}
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1"><h3>Car Shop!</h3></span>
+        </div>
+    </nav>
+    <h2>Home</h2>
+    {% for parking in parkings %}
+        <img class="thumbnail card-img-top" src="{{ vehicle.imageURL }}" alt="...">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"><strong> Slug: </strong>{{ parking.plate }}</li>
+            <li class="list-group-item"><strong> Year: </strong>{{ parking.model }}</li>
+            <li class="list-group-item"><strong> Color: </strong>{{ parking.brand }}</li>
+        </ul>
+    {% endfor %}
+
+{% endblock %}
