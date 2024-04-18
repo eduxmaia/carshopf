@@ -6,7 +6,7 @@ from .models import *
 from .models import Parking
 
 
-# Create your views here.
+# Create your views here..
 def parking(request):
     parking = Parking.objects.all()
 
