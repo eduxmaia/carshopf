@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div style="text-align: center;">
+        {% for plate in plates %}
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h3 class="card-title">{{ parking.car_model }}</h3>
+
+                    <h5>{{ parking.plate }}</h5>
+                    <h5>{{ parking.code }}</h5>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
